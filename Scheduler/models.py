@@ -19,8 +19,8 @@ class ManSchedule(models.Model):
 
 class F1Man(ManSchedule):
     class Meta:
-        verbose_name = "F1 Man"
-        verbose_name_plural = "F1 Man"
+        verbose_name = "F1-Man"
+        verbose_name_plural = "F1-Man"
 
 class F3Dmg104(ManSchedule):
     class Meta:
