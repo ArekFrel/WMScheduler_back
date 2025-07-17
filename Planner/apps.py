@@ -10,7 +10,7 @@ class PlannerConfig(AppConfig):
     name = 'Planner'
 
     def ready(self):
-        if any(('makemigrations' in sys.argv, 'migrate' in sys.argv)):
+        if not 'runserver' in sys.argv:
             return
         global has_run
         with run_once_lock:

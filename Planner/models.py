@@ -89,5 +89,9 @@ class ItemsToPlan(models.Model):
     def __str__(self):
         return f'{self.po} {self.drawing}'
 
+    class Meta:
+        verbose_name = "Item To Plan"
+        verbose_name_plural = "Items To Plan"
+
 if __name__ == "__main__":
     pass
