@@ -1,6 +1,6 @@
 from django.db import models
 from Scheduler.models import ManSchedule
-from Planner.const import CURSOR, ENGINE
+
 class GeneralPlanner(models.Model):
     id = models.IntegerField(primary_key=True)
     pcs = models.IntegerField()
@@ -65,7 +65,7 @@ class F7ChetoPlanner(GeneralPlanner):
 
 
 class ItemsToPlan(models.Model):
-    item_id = models.IntegerField(unique=True)
+    item_id = models.IntegerField(primary_key=True)
     drawing = models.CharField(max_length=50)
     po = models.IntegerField()
     material = models.CharField(max_length=50)
